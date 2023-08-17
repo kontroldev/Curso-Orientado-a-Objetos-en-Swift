@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 // STRUCT vs CLASS - ESTRUCTURA vs CLASE.
 /*Las estructuras y las clases en Swift tienen muchas cosas en común.
@@ -26,7 +26,6 @@ class SomeClass {        // Asi de define una clase.
     // La definicion de la clase aqui.
 }
 
-
 struct Resolution {   // La estructura tiene en este caso dos propiedades(width, height) estas se llaman `Stored Properties`, forman parte de la estructura y puedes ser variables en tiempo de ejecucion.
     var width = 0
     var height = 0
@@ -39,8 +38,10 @@ class VideoMode {
     var name: String?
 }
 
+// Esto crea un "objeto" de la estructura o de la clase
+// Esto es tambien instansciar una clase o una estructura.
 let someResolution = Resolution() // Esto crea un obejeto de la estructra o de la clase para ser usado en codigo.
-let someVideoMode = VideoMode()       // Esto tambien s epuede llamar un `Init`
+let someVideoMode = VideoMode()       // Esto tambien se puede llamar un `Init`
 
 print(someResolution.width)  //La funcion `.width` accede a la funcion de la `Resolution` - "computed properties",para preguntar la resolucion de esa funcion.
 someVideoMode.resolution.width = 1280  // Cambia el valor. de `someVideMode` - `resolucion`y accedo con el `.width`
